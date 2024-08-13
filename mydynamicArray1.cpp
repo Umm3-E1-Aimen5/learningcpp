@@ -30,10 +30,14 @@ class myArray{
             cout<<"\n *(p+"<<i<<") = "<<*(p+i);
          }
     }
+    void setvalue(int a){
+        *(p+a) = 100;
+
+    }
     int at(int b){
         return *(p+b);
     }
-    int size(){
+    int getusedarraysize(){
         return this->i;
     }
     
@@ -46,9 +50,11 @@ int main(){
         num +=1;
     }
     aa.printallvalues();
-    
+    aa.setvalue(7);
+    aa.printallvalues();
+
     // cout<<aa.at(10);
     cout<<"\nhello";
-    // cout<<"\n"<<aa.size();
+    cout<<"\n"<<aa.getusedarraysize();
 
 }
